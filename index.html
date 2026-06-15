@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Light Control</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Smart Home Dashboard</h2>
+        <p class="subtitle">Control your ESP32 lights in real-time</p>
+        
+        <div class="control-panel">
+            <div class="card">
+                <h3>Light 1</h3>
+                <label class="switch">
+                    <input type="checkbox" id="light1-switch" onchange="toggleLight('light1', this.checked)">
+                    <span class="slider round"></span>
+                </label>
+                <p id="light1-status">Status: Fetching...</p>
+            </div>
+
+            <div class="card">
+                <h3>Light 2</h3>
+                <label class="switch">
+                    <input type="checkbox" id="light2-switch" onchange="toggleLight('light2', this.checked)">
+                    <span class="slider round"></span>
+                </label>
+                <p id="light2-status">Status: Fetching...</p>
+            </div>
+
+            <div class="card">
+                <h3>Light 3</h3>
+                <label class="switch">
+                    <input type="checkbox" id="light3-switch" onchange="toggleLight('light3', this.checked)">
+                    <span class="slider round"></span>
+                </label>
+                <p id="light3-status">Status: Fetching...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
